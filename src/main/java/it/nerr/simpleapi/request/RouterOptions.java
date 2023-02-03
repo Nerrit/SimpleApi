@@ -14,18 +14,18 @@ public class RouterOptions {
     private final List<ResponseFunction> responseTransformers;
     private final GlobalRateLimiter globalRateLimiter;
     private final RequestQueueFactory requestQueueFactory;
-    private final String wolframAlphaApiBaseUrl;
+    private final String baseUrl;
 
     public RouterOptions(String token, ReactorResources reactorResources, ExchangeStrategies exchangeStrategies,
                          List<ResponseFunction> responseTransformers, GlobalRateLimiter globalRateLimiter,
-                         RequestQueueFactory requestQueueFactory, String wolframAlphaApiBaseUrl) {
+                         RequestQueueFactory requestQueueFactory, String baseUrl) {
         this.token = token;
         this.reactorResources = reactorResources;
         this.exchangeStrategies = exchangeStrategies;
         this.responseTransformers = responseTransformers;
         this.globalRateLimiter = globalRateLimiter;
         this.requestQueueFactory = requestQueueFactory;
-        this.wolframAlphaApiBaseUrl = wolframAlphaApiBaseUrl;
+        this.baseUrl = baseUrl;
     }
 
     public String getToken() {
@@ -52,7 +52,7 @@ public class RouterOptions {
         return requestQueueFactory;
     }
 
-    public String getWolframAlphaApiBaseUrl() {
-        return wolframAlphaApiBaseUrl;
+    public String getBaseUrl() {
+        return baseUrl;
     }
 }

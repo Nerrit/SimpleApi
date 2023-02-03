@@ -41,7 +41,7 @@ public class DefaultRouter implements Router {
         this.reactorResources = routerOptions.getReactorResources();
         this.httpClient = new WebClient(reactorResources.getHttpClient(),
                 routerOptions.getExchangeStrategies(), "Bot", routerOptions.getToken(),
-                routerOptions.getResponseTransformers(), routerOptions.getWolframAlphaApiBaseUrl());
+                routerOptions.getResponseTransformers(), routerOptions.getBaseUrl());
     }
 
     @Override
